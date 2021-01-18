@@ -10,7 +10,7 @@ request.onload =function()
     var asiancountries=countrydata.filter((element)=>{
         if(element.region==="Asia")
         {
-            //console.log(element.name);
+            console.log(element.name);
            
         }
     });
