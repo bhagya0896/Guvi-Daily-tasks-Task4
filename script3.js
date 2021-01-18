@@ -41,15 +41,18 @@ console.log(element.name,element.capital,element.flag);
    
 
 //5.  countries which uses US Dollars as currency.
-for(var i in countrydata)
-{
+    let result = countrydata.filter(element=>{
+      let currencies= element.currencies;
 
-if(countrydata[i].currencies[0].name==="United States dollar")
-{
-    console.log(countrydata[i].name);
-}
-}
-
+      for( let ele of currencies)
+      {
+        if(ele.code=="USD")
+        
+          return element;
+        
+      }
+    });
+    console.log(result);
 
 
 
